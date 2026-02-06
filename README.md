@@ -1,4 +1,8 @@
-# my-app (root)
+# Library Management System
+
+This project presents a library management system that was created to automate and simplify library operations using React and Node.js.
+
+## Getting Started
 
 Run frontend and backend together from the project root.
 
@@ -21,7 +25,8 @@ npm run install:all
 npm run dev
 ```
 
-Alternatives:
+## Alternatives
+
 - Run backend only:
 
 ```bash
@@ -38,6 +43,7 @@ npm install
 npm run dev
 ```
 
-Notes:
+## Notes
+
 - Vite dev server proxies `/api` requests to the backend. Ensure `backend/.env` has your DB settings and backend is running on port 8081.
 - If you prefer not to use `concurrently`, open two terminals and run frontend/backend separately.
