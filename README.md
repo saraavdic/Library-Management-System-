@@ -8,59 +8,59 @@ Date: January 7, 2026
 
 ---
 
-## ✨ Features
+##  Features
 
-### 👥 User Management & Authentication
+###  User Management & Authentication
 - Secure registration/login with JWT authentication
 - Role-based access control (Admin, Member, Guest)
 - Password hashing with bcrypt
 - Account activation and password recovery
 - Profile management
 
-### 📚 Book & Catalogue Management
+###  Book & Catalogue Management
 - Full CRUD operations for books
 - Book instance tracking (multiple physical copies)
 - Advanced search and filtering by title, author, category
 - Soft-delete functionality
 - Cover image support
 
-### 🤖 AI-Powered Metadata Suggestions
+###  AI-Powered Metadata Suggestions
 - Local Ollama integration for intelligent book metadata generation
 - Automatic suggestions for descriptions, publishers, ISBN, genres
 - Fallback to manual entry if AI unavailable
 
-### 🔄 Borrowing & Returns
+###  Borrowing & Returns
 - Digital borrowing with automatic due date calculation
 - Return processing with availability updates
 - Borrowing history tracking
 - Reservation system for unavailable books
 
-### 💰 Fine & Fee Management
+###  Fine & Fee Management
 - Automatic fine calculation for overdue books
 - Configurable daily rates
 - Payment status tracking
 - Admin ability to waive or adjust fines
 
-### 📢 Announcements & Communication
+###  Announcements & Communication
 - Admin can create and publish announcements
 - Categorized announcements (General, Important, Event)
 - Built-in messaging system for member inquiries
 - Contact forms for public website
 
-### 🎯 Member Portal
+###  Member Portal
 - Personalized dashboard with active loans
 - Account information and membership status
 - Borrowing history
 - Fine balance and payment status
 
-### 🌐 Public Library Website
+###  Public Library Website
 - Library information and history
 - Operating hours and contact details
 - Announcements display
 - Gallery section
 - Member login/registration gateway
 
-### 👨‍💼 Administrative Dashboard
+### Administrative Dashboard
 - System statistics and reports
 - Member management tools
 - Book inventory management
@@ -69,7 +69,7 @@ Date: January 7, 2026
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 - **React** - UI library
@@ -95,7 +95,7 @@ Date: January 7, 2026
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Key Tables
 - `users` - Authentication and admin accounts
@@ -119,7 +119,7 @@ Date: January 7, 2026
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js (v16+)
