@@ -1,0 +1,4 @@
+.announcement-card { background:#1e293b; padding:20px; border-radius:12px; }
+.tag { padding:4px 10px; border-radius:8px; font-size:12px; font-weight:bold; }
+.red{background:#f87171;} .green{background:#34d399;} .yellow{background:#facc15;}
+.announcement-date { opacity:0.7; margin:10px 0; }

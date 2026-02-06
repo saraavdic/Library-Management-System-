@@ -1,0 +1,248 @@
+.status-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1a2a4a 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.status-main {
+  padding: 50px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.status-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #16c784;
+  text-align: left;
+}
+
+.status-subtitle {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* Section Headers */
+.status-section {
+  margin-bottom: 60px;
+}
+
+.status-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #ffffff;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #16c784;
+}
+
+/* Grid */
+.status-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card Base */
+.status-card {
+  background: linear-gradient(135deg, #1a2a4a 0%, #16213e 100%);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 18px 40px rgba(2,6,23,0.45);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  cursor: pointer;
+}
+
+.status-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(2,6,23,0.5);
+}
+
+.status-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.status-card p {
+  font-size: 13px;
+  margin-bottom: 8px;
+  opacity: 0.85;
+  color: rgba(255,255,255,0.95);
+}
+
+.status-card p strong {
+  opacity: 0.7;
+}
+
+/* Warning text */
+.warning {
+  color: #fca5a5 !important;
+  font-weight: 600;
+}
+
+/* Status Tags */
+.status-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  text-align: center;
+}
+
+.status-tag.green {
+  background-color: rgba(22, 199, 132, 0.2);
+  color: #86efac;
+}
+
+.status-tag.red {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+/* Fine card accent */
+.fine-card {
+  border-left: 4px solid #ef4444;
+}
+
+.paid {
+  color: #86efac;
+  font-weight: 600;
+}
+
+.unpaid {
+  color: #fca5a5;
+  font-weight: 600;
+}
+
+.empty-text {
+  opacity: 0.7;
+  font-style: italic;
+  font-size: 14px;
+}
+
+
+
+body.light-mode .status-container {
+  background: linear-gradient(180deg, #f0fbf6 0%, #eef8f3 100%);
+  color: #073532;
+}
+
+body.light-mode .status-container .status-title {
+  color: #2fb98a;
+}
+
+body.light-mode .status-container .status-section h2 {
+  color: #073532;
+  border-bottom-color: #2fb98a;
+}
+
+body.light-mode .status-container .status-card {
+  background: #f3f9f6;
+  border: 1px solid rgba(6,36,34,0.06);
+  box-shadow: 0 12px 28px rgba(6,36,34,0.06);
+}
+
+body.light-mode .status-container .status-card:hover {
+  box-shadow: 0 24px 52px rgba(47,185,138,0.25);
+}
+
+body.light-mode .status-container .status-card h3 {
+  color: #042a26;
+}
+
+body.light-mode .status-container .status-card p {
+  color: #000000;
+}
+
+body.light-mode .status-container .warning {
+  color: #c94b4b !important;
+}
+
+body.light-mode .status-container .status-tag.green {
+  background-color: rgba(22, 199, 132, 0.2);
+  color: #41ec80;
+}
+
+body.light-mode .status-container .status-tag.red {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ff6363;
+}
+
+body.light-mode .status-container .status-tag.yellow {
+  background-color: rgba(234, 179, 8, 0.2);
+  color: #c5b11c;
+}
+
+body.light-mode .status-container .fine-card {
+  border-left-color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .status-main {
+    padding: 40px 40px;
+  }
+
+  .status-title {
+    font-size: 28px;
+  }
+
+  .status-section h2 {
+    font-size: 20px;
+  }
+
+  .status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .status-main {
+    padding: 30px 20px;
+  }
+
+  .status-title {
+    font-size: 24px;
+  }
+
+  .status-section h2 {
+    font-size: 18px;
+  }
+
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-main {
+    padding: 20px 15px;
+  }
+
+  .status-title {
+    font-size: 20px;
+  }
+
+  .status-card h3 {
+    font-size: 15px;
+  }
+}

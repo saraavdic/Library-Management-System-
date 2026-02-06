@@ -1,0 +1,85 @@
+
+.error-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 20px 120px; /* larger bottom padding to avoid gap to footer */
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 40%);
+  position: relative;
+  overflow: hidden;
+}
+
+.error-card {
+  width: 100%;
+  max-width: 780px;
+  border-radius: 20px;
+  padding: 56px 32px;
+  text-align: center;
+  border: 1px solid rgba(15,23,42,0.04);
+  box-shadow: none;
+  z-index: 2;
+}
+
+.error-code {
+  font-size: 160px;
+  line-height: 1;
+  color: #97b4c3; 
+  font-weight: 900;
+  margin: 0 0 10px 0;
+}
+
+.error-body { margin-top: 8px; }
+
+.error-title {
+  font-size: 28px;
+  margin: 6px 0 12px 0;
+  color: #173164;
+  font-weight: 800;
+}
+
+.error-message {
+  max-width: 660px;
+  margin: 0 auto 22px auto;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.error-actions { display: flex; gap: 12px; justify-content: center; align-items: center; }
+
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px;
+     border-radius: 999px; text-decoration: none; font-weight: 700; }
+
+.btn-primary { background: linear-gradient(90deg, #586a74 0%, #97b4c3 100%); 
+    color: #fff; }
+
+.btn-alt { background: transparent; border: 1px solid rgba(37,99,235,0.12); color: #042a26; }
+
+.error-card, .error-card * {
+  box-shadow: none !important;
+}
+
+.error-card .btn-primary, .error-card .btn-primary:hover, .error-card .btn-primary:active {
+  box-shadow: none !important;
+  transform: none !important;
+  color: #fff !important;
+}
+
+.error-card .btn-alt { color: #042a26 !important; }
+
+/* Responsive: reduce sizes on narrow screens */
+@media (max-width: 720px) {
+  .error-card { padding: 36px 20px; }
+  .error-code { font-size: 96px; }
+  .error-title { font-size: 20px; }
+  .error-message { font-size: 15px; }
+  .error-hero::after { right: -80px; bottom: -80px; width: 280px; height: 280px; }
+}
+
+
+body.error-bg {
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 40%);
+  min-height: 100vh;
+}
+

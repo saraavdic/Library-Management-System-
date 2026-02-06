@@ -1,0 +1,30 @@
+.message-section .form-card {
+  background: #ffffff !important;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.message-section h2 {
+  color: #000000; /* Ask a Question heading for website */
+}
+
+.message-section .muted {
+  color: #000000; /* Muted text for website form */
+}
+
+.message-section .label-text {
+  color: #073532; /* Dark text for labels on light form */
+}
+
+.message-section .contact-form input,
+.message-section .contact-form textarea {
+  background: #e2e2e260;
+  color: #073532;
+  border: 1px solid rgba(6,36,34,0.06);
+}
+
+.message-section .send-btn {
+  background: linear-gradient(135deg,#2fb98a 0%, #1f8f6e 100%);
+  color: #ffffff;
+}

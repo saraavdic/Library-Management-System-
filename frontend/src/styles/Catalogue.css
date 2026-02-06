@@ -1,0 +1,704 @@
+.catalogue-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1a2a4a 100%);
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.catalogue-main {
+  padding: 50px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* Controls Section */
+.catalogue-controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.search-input,
+.filter-dropdown {
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.search-input {
+  flex: 1;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input:focus,
+.filter-dropdown:focus {
+  outline: none;
+  border-color: #16c784;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 12px rgba(22, 199, 132, 0.2);
+}
+
+.filter-dropdown {
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.filter-dropdown option {
+  background: #1a2a4a;
+  color: #ffffff;
+}
+
+/* Results Info */
+.results-info {
+  margin-bottom: 30px;
+  padding: 12px 16px;
+  background: rgba(22, 199, 132, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(22, 199, 132, 0.2);
+  font-size: 14px;
+}
+
+.results-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.results-info strong {
+  color: #16c784;
+  font-weight: 700;
+}
+
+/* Grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Catalogue Card */
+.catalogue-card {
+  background: #1e1b4b;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.45);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.catalogue-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(2, 6, 23, 0.5);
+}
+
+.book-cover {
+  background:#0f172a;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalogue-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.catalogue-card .author {
+  font-size: 12px;
+  opacity: 0.7;
+  margin: 0 0 12px 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.book-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 8px;
+}
+
+.genre-tag {
+  padding: 4px 10px;
+  background-color: rgba(22, 199, 132, 0.2);
+  color: #86efac;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+/* Genre-specific color classes for tags */
+.genre-tag.genre-fiction {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.genre-tag.genre-mystery {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #d8b4fe;
+}
+
+.genre-tag.genre-romance {
+  background-color: rgba(236, 72, 153, 0.2);
+  color: #f472b6;
+}
+
+.genre-tag.genre-scifi {
+  background-color: rgba(14, 165, 233, 0.2);
+  color: #7dd3fc;
+}
+
+.genre-tag.genre-fantasy {
+  background-color: rgba(168, 85, 247, 0.2);
+  color: #d8b4fe;
+}
+
+.genre-tag.genre-history {
+  background-color: rgba(180, 83, 9, 0.2);
+  color: #fed7aa;
+}
+
+.genre-tag.genre-biography {
+  background-color: rgba(71, 85, 105, 0.2);
+  color: #cbd5e1;
+}
+
+.genre-tag.genre-selfhelp {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+}
+
+.genre-tag.genre-adventure {
+  background-color: rgba(249, 115, 22, 0.2);
+  color: #fed7aa;
+}
+
+.genre-tag.genre-thriller {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.genre-tag.genre-default {
+  background-color: rgba(22, 199, 132, 0.2);
+  color: #86efac;
+}
+
+.year {
+  font-size: 11px;
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.borrow-btn {
+  padding: 10px 14px;
+  width: 100%;
+  background: linear-gradient(135deg, #16c784 0%, #14a970 100%);
+  border: none;
+  border-radius: 8px;
+  color: #0f172a;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.borrow-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 199, 132, 0.4);
+}
+
+.borrow-btn:active {
+  transform: translateY(0);
+}
+
+/* Load more button */
+.load-more-btn {
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #16c784 0%, #14a970 100%);
+  border: none;
+  border-radius: 10px;
+  color: #0f172a;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.load-more-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(22,199,132,0.18); }
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 80px 40px;
+  opacity: 0.7;
+}
+
+.no-results p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* =========================
+   Light Mode
+   ========================= */
+
+body.light-mode .catalogue-container {
+  --lp-bg-start: #f0fbf6;
+  --lp-bg-end: #eef8f3;
+  --lp-panel: #f3f9f6;
+  --lp-text: #073532;
+  --lp-muted: #4a6a63;
+  --lp-accent: #2fb98a;
+  --lp-accent-2: #1f8f6e;
+  --lp-border: rgba(6, 36, 34, 0.06);
+  background: linear-gradient(180deg, var(--lp-bg-start), var(--lp-bg-end));
+  color: var(--lp-text);
+}
+
+
+
+body.light-mode .catalogue-container .search-input,
+body.light-mode .catalogue-container .filter-dropdown {
+  background: #ffffff;
+  border: 1px solid var(--lp-border);
+  color: var(--lp-text);
+}
+
+body.light-mode .catalogue-container .search-input::placeholder {
+  color: rgba(7, 53, 50, 0.4);
+}
+
+body.light-mode .catalogue-container .search-input:focus,
+body.light-mode .catalogue-container .filter-dropdown:focus {
+  border-color: var(--lp-accent);
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(47, 185, 138, 0.15);
+}
+
+body.light-mode .catalogue-container .filter-dropdown option {
+  background: #f3f9f6;
+  color: var(--lp-text);
+}
+
+body.light-mode .catalogue-container .results-info {
+  background: rgba(47, 185, 138, 0.06);
+  border-color: rgba(47, 185, 138, 0.1);
+  color: var(--lp-muted);
+}
+body.light-mode .catalogue-container .results-info p{
+    color:#042a26;
+}
+
+body.light-mode .catalogue-container .results-info strong {
+  color: var(--lp-accent);
+}
+
+body.light-mode .catalogue-container .catalogue-card {
+  background: var(--lp-panel);
+  border: 1px solid var(--lp-border);
+  box-shadow: 0 12px 28px rgba(6, 36, 34, 0.06);
+}
+
+body.light-mode .catalogue-container .catalogue-card:hover {
+  box-shadow: 0 24px 52px rgba(47, 185, 138, 0.15);
+}
+
+body.light-mode .catalogue-container .book-cover {
+  background: linear-gradient(135deg, rgba(47, 185, 138, 0.1), rgba(47, 185, 138, 0.04));
+  color: var(--lp-accent);
+}
+
+body.light-mode .catalogue-container .catalogue-card h3 {
+  color: #042a26;
+}
+
+body.light-mode .catalogue-container .catalogue-card .author {
+  color: var(--lp-muted);
+}
+
+body.light-mode .catalogue-container .genre-tag {
+  background-color: rgba(47, 185, 138, 0.15);
+  color: #41ec80;
+}
+
+body.light-mode .catalogue-container .borrow-btn {
+  background: linear-gradient(135deg, var(--lp-accent) 0%, var(--lp-accent-2) 100%);
+  color: #ffffff;
+}
+
+body.light-mode .catalogue-container .borrow-btn:hover {
+  box-shadow: 0 8px 20px rgba(47, 185, 138, 0.3);
+}
+
+body.light-mode .catalogue-container .book-meta {
+  border-bottom-color: rgba(47, 185, 138, 0.1);
+}
+
+body.light-mode .catalogue-container .year {
+  color: var(--lp-muted);
+}
+
+body.light-mode .catalogue-container .no-results {
+  color: var(--lp-muted);
+}
+
+/* Modal book-specific content styling */
+
+.modal-author {
+  font-size: 16px;
+  color: #86efac;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.modal-year {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 16px 0;
+}
+
+.modal-genre {
+  margin-bottom: 20px;
+}
+
+.genre-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(22, 199, 132, 0.2);
+  color: #86efac;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Genre-specific color classes for badges */
+.genre-badge.genre-fiction {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.genre-badge.genre-mystery {
+  background: rgba(139, 92, 246, 0.2);
+  color: #d8b4fe;
+}
+
+.genre-badge.genre-romance {
+  background: rgba(236, 72, 153, 0.2);
+  color: #f472b6;
+}
+
+.genre-badge.genre-scifi {
+  background: rgba(14, 165, 233, 0.2);
+  color: #7dd3fc;
+}
+
+.genre-badge.genre-fantasy {
+  background: rgba(168, 85, 247, 0.2);
+  color: #d8b4fe;
+}
+
+.genre-badge.genre-history {
+  background: rgba(180, 83, 9, 0.2);
+  color: #fed7aa;
+}
+
+.genre-badge.genre-biography {
+  background: rgba(71, 85, 105, 0.2);
+  color: #cbd5e1;
+}
+
+.genre-badge.genre-selfhelp {
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+}
+
+.genre-badge.genre-adventure {
+  background: rgba(249, 115, 22, 0.2);
+  color: #fed7aa;
+}
+
+.genre-badge.genre-thriller {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.genre-badge.genre-default {
+  background: rgba(22, 199, 132, 0.2);
+  color: #86efac;
+}
+
+.modal-rating {
+  margin-bottom: 16px;
+}
+
+.rating-stars {
+  display: inline-block;
+  font-size: 14px;
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.modal-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 28px 0;
+}
+
+.rating-btn {
+  flex: 1;
+  padding: 11px 14px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.rating-btn:hover {
+  border-color: #16c784;
+  color: #16c784;
+  background: rgba(22, 199, 132, 0.08);
+}
+
+.rating-btn.active {
+  background: linear-gradient(135deg, #16c784 0%, #14a970 100%);
+  border-color: #16c784;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.rating-btn.dislike.active {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.borrow-modal-btn {
+  width: 100%;
+  padding: 13px 24px;
+  background: linear-gradient(135deg, #16c784 0%, #14a970 100%);
+  border: none;
+  border-radius: 10px;
+  color: #0f172a;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.borrow-modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(22, 199, 132, 0.35);
+}
+
+/* Light Mode - Book modal content */
+body.light-mode .modal-right h2 {
+  color: #042a26;
+}
+
+body.light-mode .modal-author {
+  color: #2fb98a;
+}
+
+body.light-mode .modal-year {
+  color: #4a6a63;
+}
+
+body.light-mode .genre-badge {
+  background: rgba(47, 185, 138, 0.15);
+  color: #41ec80;
+}
+
+/* Light mode genre-specific badge colors */
+body.light-mode .genre-badge.genre-fiction {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+body.light-mode .genre-badge.genre-mystery {
+  background: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+}
+
+body.light-mode .genre-badge.genre-romance {
+  background: rgba(236, 72, 153, 0.15);
+  color: #ec4899;
+}
+
+body.light-mode .genre-badge.genre-scifi {
+  background: rgba(14, 165, 233, 0.15);
+  color: #0ea5e9;
+}
+
+body.light-mode .genre-badge.genre-fantasy {
+  background: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+}
+
+body.light-mode .genre-badge.genre-history {
+  background: rgba(180, 83, 9, 0.15);
+  color: #b45309;
+}
+
+body.light-mode .genre-badge.genre-biography {
+  background: rgba(71, 85, 105, 0.15);
+  color: #475569;
+}
+
+body.light-mode .genre-badge.genre-selfhelp {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+body.light-mode .genre-badge.genre-adventure {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+}
+
+body.light-mode .genre-badge.genre-thriller {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+body.light-mode .genre-badge.genre-default {
+  background: rgba(47, 185, 138, 0.15);
+  color: #41ec80;
+}
+
+/* Light mode genre-specific tag colors */
+body.light-mode .genre-tag.genre-fiction {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+}
+
+body.light-mode .genre-tag.genre-mystery {
+  background-color: rgba(139, 92, 246, 0.15);
+  color: #8b5cf6;
+}
+
+body.light-mode .genre-tag.genre-romance {
+  background-color: rgba(236, 72, 153, 0.15);
+  color: #ec4899;
+}
+
+body.light-mode .genre-tag.genre-scifi {
+  background-color: rgba(14, 165, 233, 0.15);
+  color: #0ea5e9;
+}
+
+body.light-mode .genre-tag.genre-fantasy {
+  background-color: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+}
+
+body.light-mode .genre-tag.genre-history {
+  background-color: rgba(180, 83, 9, 0.15);
+  color: #b45309;
+}
+
+body.light-mode .genre-tag.genre-biography {
+  background-color: rgba(71, 85, 105, 0.15);
+  color: #475569;
+}
+
+body.light-mode .genre-tag.genre-selfhelp {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+body.light-mode .genre-tag.genre-adventure {
+  background-color: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+}
+
+body.light-mode .genre-tag.genre-thriller {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+body.light-mode .genre-tag.genre-default {
+  background-color: rgba(47, 185, 138, 0.15);
+  color: #41ec80;
+}
+
+body.light-mode .rating-stars {
+  color: #f59e0b;
+}
+
+body.light-mode .modal-description {
+  color: #4a6a63;
+}
+
+body.light-mode .rating-btn {
+  border-color: rgba(6, 36, 34, 0.15);
+  color: #4a6a63;
+}
+
+body.light-mode .rating-btn:hover {
+  border-color: #2fb98a;
+  color: #2fb98a;
+  background: rgba(47, 185, 138, 0.06);
+}
+
+body.light-mode .rating-btn.active {
+  background: linear-gradient(135deg, #2fb98a 0%, #1f8f6e 100%);
+  border-color: #2fb98a;
+  color: #ffffff;
+}
+
+body.light-mode .rating-btn.dislike.active {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+body.light-mode .borrow-modal-btn {
+  background: linear-gradient(135deg, #2fb98a 0%, #1f8f6e 100%);
+  color: #ffffff;
+}
+
+body.light-mode .borrow-modal-btn:hover {
+  box-shadow: 0 12px 28px rgba(47, 185, 138, 0.3);
+}

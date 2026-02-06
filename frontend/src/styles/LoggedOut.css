@@ -1,0 +1,159 @@
+.logged-out-main {
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 16px;
+  background: linear-gradient(135deg, #f6fbf9 0%, #f0f6f4 40%, #eef7ff 100%);
+  color: #042a26;
+  position: relative; 
+  padding-top: 7%;
+}
+
+.logged-out-card {
+  position: relative;
+  overflow: visible;
+  border-radius: 0; 
+  padding: 44px 36px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.logged-out-message { margin-bottom: 18px; }
+
+.logged-out-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #042a26;
+  border: 1px solid rgba(4,42,38,0.06);
+}
+.ghost{
+margin-top: 7px;
+}
+
+.btn.ghost:hover { background-color: #97b4c354 ; }
+
+.logged-out-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: flex-start;  
+  min-height: 440px; 
+}
+
+.logged-out-left .logged-out-title,
+.logged-out-left .logged-out-message {
+  text-align: center;
+  width: 100%;
+}
+
+.logged-out-left .logged-out-actions {
+  justify-content: center; 
+  width: 100%;
+}
+
+.logged-out-left .logged-out-actions .btn,
+.logged-out-left .logged-out-actions .login-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 160px;
+  height: 44px;
+  padding: 0 18px;
+}
+
+.login-button{
+  background: linear-gradient(90deg, #586a74 0%, #97b4c3 100%);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(58,88,255,0.18);
+}
+
+.login-button,
+.login-button:hover,
+.login-button:focus {
+  color: #fff;
+}
+.logged-out-card::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(60deg, #586a74, rgba(79, 95, 129, 0.04) 25%, rgba(5, 26, 43, 0.03) 55%, rgba(26, 37, 103, 0.02) 80%);
+  filter: blur(40px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.logged-out-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0.06));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.logged-out-main::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: min(1200px, 110%);
+  height: 480px;
+  background: radial-gradient(40% 60% at 20% 30%, rgba(22,199,132,0.06) 0%, rgba(22,199,132,0.02) 24%, transparent 40%), radial-gradient(30% 40% at 80% 80%, rgba(88,106,116,0.03) 0%, transparent 40%);
+  filter: blur(48px);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+  
+}
+
+@media (max-width: 900px) {
+  .logged-out-left .logged-out-actions {
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .logged-out-left .logged-out-actions .btn,
+  .logged-out-left .logged-out-actions .login-button {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 140px;
+    height: 44px;
+    display: inline-flex;
+  }
+    .logged-out-left {
+    justify-content: flex-start;
+    min-height: auto;
+    padding-left: 0;
+    padding-top: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .logged-out-card { padding: 28px 18px; }
+  .logged-out-title { font-size: 22px; }
+  .btn { padding: 10px 14px; }
+}
