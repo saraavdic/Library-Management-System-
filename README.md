@@ -1,4 +1,4 @@
-# Library Management System
+# Library Management System Website
 
 This project presents a library management system that was created to automate and simplify library operations using React and Node.js.
 
